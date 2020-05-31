@@ -1,0 +1,17 @@
+git branch
+
+menampilkan branch
+git branch
+
+membuat branch
+git branch <nama_branch>
+
+menampilkan visualisasi branch dlm graph
+git log --all --decorate --oneline --graph
+
+membuat alias graph 
+alias graph="git log --all --decorate --oneline --graph"
+
+
+pindah ke branch lain 
+git checkout <nama_branch> 

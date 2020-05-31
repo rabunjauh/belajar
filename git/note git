@@ -1,0 +1,17 @@
+git config --global core.editor "'C:/Program Files/Sublime Text 3/subl.exe' -n -w"
+
+melihat apa saja yg telah kita lakukan
+git log 
+
+kembali ke commit sebelumnya 
+
+git checkout <5 digit hash commit>
+
+mengembalikan hanya file yg sudah terhapus
+
+git checkout <5 digit hash commit> <nama file>
+
+file akan kembali ke dalam staging area harus di commit
+
+
+

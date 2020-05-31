@@ -1,0 +1,20 @@
+Jenis Merge 
+
+1. Fast Forward -> ketika branch yg akan kita gabungkan berada dlm jalur langsung / direct path 
+    git merge <nama_branch>
+    
+    melihat branch yg dimerge
+    git branch --merged
+
+    menghapus branch yg sudah di merge
+    git branch -d <nama_branch>
+
+    menghapus branch yg belum di merge 
+    git branch -D <nama_branch>  
+    
+2. Three-way Merge / merge commit -> 
+
+git merge conflict->2 branch mengerjakan baris yg sama dalam  repo
+
+
+

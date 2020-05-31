@@ -1,0 +1,11 @@
+fork dari akun git org lain
+
+git clone ke komputer lokal
+
+untuk melihat remote kemana 
+git remote -v
+
+syncrone melihat update dari akun yg kita fork
+
+
+
