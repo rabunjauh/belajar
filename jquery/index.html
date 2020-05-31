@@ -1,99 +1,125 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Belajar jquery</title>
-	<style>
-		img{ transform: rotate(180deg); }
-	</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
-<body>
-	<img src="koala_footer.png" alt="">
-	<h1>Belajar Jquery</h1>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Belajar jquery</title>
+		<style>
+			img{ transform: rotate(180deg); }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
 
-	<div id="box1">Box 1</div>
+	<body>
+		<img src="koala_footer.png" alt="">
+		<h1>Belajar Jquery</h1>
 
-	<div id="boxes_wrap">
-		<div class="boxes">boxes1</div>
-		<div class="boxes">boxes2</div>
-		<div class="boxes">boxes3</div>
-		<div class="boxes">boxes4</div>
-	</div>
+		<div id="box1">Box 1</div>
 
-	<form >
-		<input type="text" name="inp_text" id="inp_text">
-		<input type="submit">
-	</form>
+		<div id="boxes_wrap">
+			<div class="boxes">boxes1</div>
+			<div class="boxes">boxes2</div>
+			<div class="boxes">boxes3</div>
+			<div class="boxes">boxes4</div>
+		</div>
 
-	<button type="button" id="coba">Coba</button>
-	<p>tes</p>
+		<form >
+			<input type="text" name="inp_text" id="inp_text">
+			<input type="submit">
+		</form>
 
-	<button id="btn1">Append text</button>
-	
-	<script>
-	//memastikan file sudah diload dg sempurna
-	$(document).ready(function(){
+		<button type="button" id="coba">Coba</button>
+		<p>tes</p>
 
-		// dom selection
-		$('h1').css('color', 'lightblue');
-		$('body').css('backgroundColor', 'white');
-		$('#box1').css('backgroundColor', 'blue');
-		$('.boxes').css('backgroundColor', 'yellow');
-		$('.boxes:first').css('color', 'lightblue');
-		$('.boxes:last').css('color', 'orange');
-		$('.boxes:eq(2)').css('color', 'white');
-
-		// dom event
-		$('h1').click(function(){
-			$('h1').css('color', 'black');
-		})
-
-		// untuk membuat semua class boxes berubah
-		// $('.boxes').mouseenter(function(){
-		// 	$('.boxes').css('color', 'black');
-		// })
-
-		// untuk membuat hanya baris yg di hover mouse saja yg berubah
-		$('.boxes').mouseenter(function(){
-			$(this).css('color', 'black');
-		})
-
-		$('form').submit(function(){
-			const tulisan = $('#inp_text').val();
-			// method .text dan .value
-			// -jika tanpa argument berfungsi mengambil value dari element
-			// -jika dengan argument akan merubah value element sesuai argument
-			// -istilah lainnya get and set nilai
-			$('h1').text(tulisan);
-
-			//mencegah default action dari form yg berpindah ke halaman lain
-			//method .html mengambil value element sekaligus tag html nya
-
-			// menambahkan element
-			// didalam element
-			// append -> diakhir, 
-			// prepend -> diawal,
-			// di luar element 
-			// after -> sebelum element,
-			// before -> setelah element
-
-			// menghapus element
-			// empty -> mengosongkan
-			// remove -> menghilangkan
-			event.preventDefault();
+		<button id="btn1">Append text</button>
 
 
+		<button id="btn_tambah_baris">Tambah Baris</button>
 
-		});
-			$("#coba").click(function(){
-				$("p").append("tes");
+		<table>
+			<thead>
+				<tr>
+					<th>header</th>
+				</tr>
+			</thead>
+			<tbody id="tambah_baris">
+				<tr>
+					<td>data</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		<script>
+			//memastikan file sudah diload dg sempurna
+			$(document).ready(function(){
+
+				// dom selection
+				$('h1').css('color', 'lightblue');
+				$('body').css('backgroundColor', 'white');
+				$('#box1').css('backgroundColor', 'blue');
+				$('.boxes').css('backgroundColor', 'yellow');
+				$('.boxes:first').css('color', 'lightblue');
+				$('.boxes:last').css('color', 'orange');
+				$('.boxes:eq(2)').css('color', 'white');
+
+				// dom event
+				$('h1').click(function(){
+					$('h1').css('color', 'black');
+				})
+
+				// untuk membuat semua class boxes berubah
+				// $('.boxes').mouseenter(function(){
+				// 	$('.boxes').css('color', 'black');
+				// })
+
+				// untuk membuat hanya baris yg di hover mouse saja yg berubah
+				$('.boxes').mouseenter(function(){
+					$(this).css('color', 'black');
+				})
+
+				$('form').submit(function(){
+					const tulisan = $('#inp_text').val();
+					// method .text dan .value
+					// -jika tanpa argument berfungsi mengambil value dari element
+					// -jika dengan argument akan merubah value element sesuai argument
+					// -istilah lainnya get and set nilai
+					$('h1').text(tulisan);
+
+					//mencegah default action dari form yg berpindah ke halaman lain
+					//method .html mengambil value element sekaligus tag html nya
+
+					// menambahkan element
+					// didalam element
+					// append -> diakhir, 
+					// prepend -> diawal,
+					// di luar element 
+					// after -> sebelum element,
+					// before -> setelah element
+
+					// menghapus element
+					// empty -> mengosongkan
+					// remove -> menghilangkan
+					event.preventDefault();
+				});
+
+
+				$("#coba").click(function(){
+					$("p").append("tes");
+				});
+
+				$("#btn1").click(function(){
+					$("p").append(" <b>Appended text</b>.");
+				});
+
+				$("#btn_tambah_baris").click(function(){
+					$("#tambah_baris").append("<tr><td>data selanjutnya</td></tr>");
+				});
+
+				
+
+
 			});
-			$("#btn1").click(function(){
-			    $("p").append(" <b>Appended text</b>.");
-			  });
-	});
 		</script>
-</body>
+	</body>
 </html>
