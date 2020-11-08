@@ -1,0 +1,14 @@
+property = variabel dalam object 
+method = function dalam object 
+
+
+Cara membuat object 
+1. Object Literal
+2. Function Declaration
+3. Constructor Function(keyword new)
+    Note: keyword new wajib karena 
+    jika tidak menggunakan new saat memanggil javascript akan berasumsi 
+    kita memanggil object menggunakan function declaration. 
+4. Object.create()
+
+this 
