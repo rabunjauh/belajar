@@ -27,9 +27,12 @@
 
 // var obj = {};
 // obj.halo = function(){
+//     console.log(this);
 //     console.log('halo');
 // }
 // obj.halo();
+
+// this mengembalikan object yang bersangkutan
 
 // 2. Function Declaration
 // function buatObjectMahasiswa(nama, nrp, email, jurusan){
@@ -42,9 +45,11 @@
 // }
 
 // function halo(){
+//     console.log(this);
 //     console.log('halo');
 // }
-// halo();
+// this.halo();
+// this mengembalikan object Global
 
 // var mhs3 = buatObjectMahasiswa('Mahasiswa3', '00908098', 'mahasiswa3@gmail.com', 'Teknik Perkapalan');
 // var mhs4 = buatObjectMahasiswa('Mahasiswa 4', '3143211', 'mahasiswa4@gmail.com', 'Akuntansi');
@@ -60,10 +65,12 @@
 // var mhs1 = new Mahasiswa('Mahasiswa 1', '45242534', 'mahasiswa@gmail.com', 'Teknik Informatika');
 
 // function Halo(){
+//     console.log(this);
 //     console.log('halo');
 // }
 
 // new Halo();
+// mengembalikan object yang baru dibuat / new Halo()
 
 // this
 // jika kita membuat this pada kontek global maka this merepresentasikan window
