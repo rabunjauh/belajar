@@ -1,3 +1,14 @@
 menduplikat repo dari github ke pc
 
 git clone <url dari github>
+
+jika terjadi 2 push dari git berbeda
+-saat kita commit akan muncul error rejeted
+-git status kita your branch is ahead of origins/master by 1 commit karena dari sisi komputer kita melakukan perubahan dan dari komputer lain jg melakukan 
+perubahan dan sudah di push ke github/remote 
+-lakukan git fetch untuk melihat repo di remote commitnya sampai mana 
+- jika kita git status lagi pesannya your branch and origin/master have diverged, and have 1 and 1 different ommits each, respectively. 
+  (use git pull to merge the remote branch into yours). 
+-jika kita git log --all --decorate --oneline --graph maka akan ada 2 branch baru yg harus di merge commit 
+- kita git pull akan muncul pesan conflict (add/add): merge conflict in (nama file yg conflict) 
+  dan text editor akan otomatis membuka file yang conflict, tinggal kita lanjutkan seperti merge conflict biasa.    

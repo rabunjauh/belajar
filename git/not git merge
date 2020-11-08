@@ -22,6 +22,7 @@ kembali ke commit sebelumnya
 -kita akan berada di detached head
 -dari commit detached head / commit mundur buat branch baru
 -checkout ke branch baru tsb
+-silahkan modify branch baru tsb seperti biasa.
 
 jika mau di lanjutkan menggunakan commit mundur tsb 
 
