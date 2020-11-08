@@ -1,0 +1,16 @@
+Callback
+-Merupakan mekanisme untuk memanggil kembali kode yang ada di program dari proses async
+-Biasanya dibuat dalam bentuk function, dan function tersebut di eksekusi saat proses async selesai.
+-Dengan menggunakan callback, program bisa menerima informasi yang dibutuhkan dari proses yang berjalan secara async
+
+Method Callback
+-setTimeout(handler, time), digunakan untuk menjalankan proses async sekali dalam waktu tertentu
+-setInterval(handler, time), digunakan untuk menjalankan proses async secara periodik dalam waktu tertentu
+
+setTimeout(function(){
+	//do something here
+}, 5000);
+
+setInterval(function(){
+	//do something here
+}, 5000);

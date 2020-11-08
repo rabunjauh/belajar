@@ -1,0 +1,41 @@
+Type Data Angka
+	batas akurasi integer 15 digit.
+
+Operator
+	Binary = operator yg memiliki 2 operand (operand 1 operator operand2)
+		Aritmatika (+, -, *, /, %)			
+		operator pressedence KuKaBaTaKu (Kurung Kali Bagi Tambah Kurang)
+		
+		Penugasan (yang paling sering digunakan = untuk menugasakan variabel)
+		contoh operator penugasan 
+		=	
+		+=	(x += y / x = x+y)
+		-=	(x -= y / x = x-y)
+		*=	(x *= y / x = x*y)
+		/=	(x /= y / x = x/y)
+		%=	(x %= y / x = x%y)
+
+		Perbandingan / Comparison
+			== (sama dengan) 10 == '10' True
+			!= (tidak sama dengan)
+			=== (strict sama dengan) 10 === '10' False
+			!== (strict tidak sama dengan)
+			> (lebih besar dari)
+			< (lebih kecil dari)
+			>= (lebih besar sama dengan)
+			<= (lebih kecil sama dengan)
+
+		Logika
+			&& (AND)
+			|| (OR)
+			! (NOT)
+		
+		String
+		+ (penggabung string)
+
+	Ternary = operator yang memiliki 3 operand ()
+		Kondisional
+			(kondisi) ? benar : salah
+	Unary = operator yang memiliki 1 operand (operator operand1)
+		Typeof 
+		typeof(operand untuk mengetahui type type data)

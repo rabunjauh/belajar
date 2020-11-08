@@ -14,7 +14,17 @@ Jenis Merge
     
 2. Three-way Merge / merge commit -> 
 
-git merge conflict->2 branch mengerjakan baris yg sama dalam  repo
+git merge conflict->2 branch mengerjakan baris yg sama dalam  repo otomatis membuka file yg conflict
+
+kembali ke commit sebelumnya
+-git log untuk melihat code commit nya
+-git checkout (7 digit code commit nya)
+-kita akan berada di detached head
+-dari commit detached head / commit mundur buat branch baru
+-checkout ke branch baru tsb
+
+jika mau di lanjutkan menggunakan commit mundur tsb 
+
 
 
 
