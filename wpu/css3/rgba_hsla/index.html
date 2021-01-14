@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(trees.png);
+        }
+
+        .satu{
+            width: 300px;
+            height: 300px;
+            background-color: rgba(255, 102, 0, .5);
+            position: relative;
+        }
+
+        .dua{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="satu">
+        <!-- div dua mewarisi opacity element parentnya
+            jika element parent di set property opacity maka 
+            div child nya tidak bisa di set solid menggunakan property opacity
+            karena rgba memberikan transparansi pada warna sedangkan opacity memberikan transparansi pada element
+            -->
+        <div class="dua"></div>
+    </div>
+</body>
+</html>

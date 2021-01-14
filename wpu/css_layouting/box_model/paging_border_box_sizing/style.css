@@ -1,0 +1,38 @@
+/* perbedaan padding dan margin
+1. padding tidak bisa diberi nilai negatif
+2. padding tidak punya nilain auto 
+
+padding mempengaruhi ukuran dari element*/
+
+
+/* border juga mempengaruhi ukuran element
+
+*/
+/* div{
+    width: 300px;
+    height: 300px;
+    background-color: coral;
+    margin: 20px; ukuran div berubah menjadi margin + padding
+} */
+
+
+
+/* untuk mengatasi masalah diatas bisa menggunakan box-sizing */
+
+div{
+    width: 600px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.satu{
+    background-color: royalblue;
+    padding: 10px;
+    border: 5px solid red;
+}
+
+.dua{
+    background-color: lightgreen;
+    padding: 30px;
+    border: 10px dashed orange;
+}

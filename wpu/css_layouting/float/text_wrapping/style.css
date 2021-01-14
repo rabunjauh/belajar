@@ -1,0 +1,80 @@
+/*  agar tidak collapse diakali dengan property overflow:auto
+.container{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+    overflow: auto; 
+}
+
+img{
+    width: 100px;
+    height: 110px;
+    float: left;
+    margin: 5px;
+} */
+
+/* cara yang benar float harus di clear
+caranya dengan membuat sebuah div property css nya di set clear
+valuenya sesuai dengan floatnya jika floatnya left maka clearnya juga left */
+/* .container{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+img{
+    width: 100px;
+    height: 110px;
+    float: left;
+    margin: 5px;
+}
+
+.clear{
+    clear: left;
+} */
+
+
+.container{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+img{
+    width: 100px;
+    height: 110px;
+    float: left;
+    margin: 5px;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

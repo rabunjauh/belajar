@@ -1,0 +1,64 @@
+.hello{
+    color: rgb(140, 0, 255);
+}
+
+.hello:hover{
+    color: green;
+    font-family: arial;
+    font-size: 20px;
+}
+
+.hello:active{
+    color: red;
+    font-style: italic;
+}
+
+.hello:visited{
+    color: orange;
+}
+
+/* li:first-child a{
+    color: green;
+} */
+
+/* child ke 3 */
+/* li:nth-child(3) a{
+    color: rgb(71, 165, 42);
+} */
+
+/* kelipatan 2
+li:nth-child(2n) a{
+    color: green;
+} */
+
+/* kelipatan 3 mulai dari 3-2 = 1
+li:nth-child(3n-1) a{
+    color: green;
+} */
+
+
+/* genap
+li:nth-child(even) a{
+    color: green;
+} */
+
+
+ganjil
+li:nth-child(odd) a{
+    color: green;
+}
+
+
+li:nth-child(odd) a:hover{
+    color:red;
+}
+
+
+/* pseudo-class yg berhubungan dengan posisi element */
+p:first-of-type{
+    color:red;
+}
+
+p:last-of-type{
+    color: blue;
+}

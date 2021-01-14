@@ -1,0 +1,6 @@
+Untuk mendefiniskan masalah dalam algoritma, 
+kita perlu membaca masalah berulang kali sampai masalah itu dipahami
+Langkah pertama bagi masalah menjadi 3 bagian
+1. input: data yang di perlukan untuk menyelesaikan masalah
+2. langkah/tindakan yang di perlukan untuk menghasilkan output
+3. output: hasil yang diharapkan dari proses.

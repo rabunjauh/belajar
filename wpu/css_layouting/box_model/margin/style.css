@@ -1,0 +1,129 @@
+/* margin overlaps vertical tidak saling menambahkan 
+contoh jika element atas margin bottom nya 100 px 
+sedangkan element yg dibawah margin topnya 50 px 
+maka marginnya tetap 100px 
+
+margin overlaps horizontal margin saling menambahkan
+contoh jika element yang dikiri margin-right nya 50px
+dan element yang dikanan margin-leftnya 50px maka marginnya menjadi 100px 
+
+negatif margin
+negatif margin akan membuat element yg dibawah naik keatas jika vertical
+dan akan kekiri jika horizontal
+
+margin auto akan membuat element berada di tengah2 parentnya
+*/
+
+
+/* margin overlaps vertical 
+.satu{
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 150px;
+    margin-right: 50px;
+}
+.dua{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 50px;
+}
+.tiga{
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+} */
+
+/* margin overlaps horizontal
+div{
+    display: inline-block;
+}
+.satu{
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-right: 50px;
+}
+.dua{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-left: 50px;
+}
+.tiga{
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+} */
+
+
+/* negatif margin
+.satu{
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-bottom: 30px;
+}
+.dua{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+.tiga{
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+} */
+
+/* margin auto
+.satu{
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dua{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+.tiga{
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+} */
+
+/* shorthand */
+/* .satu{
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin: 50px; margin kiri kanan atas bawah 50px
+}
+.dua{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 50px 100px; value pertama utk atas dan bawah, value kedua untuk kiri kanan
+}
+.tiga{
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    margin: 30px auto 40px; atas kiri kanan bawah 
+}
+.empat{
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    margin: 10px 20px 30px 40px; atas kanan kiri bawah 
+} */
+
+
+

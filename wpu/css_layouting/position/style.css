@@ -1,0 +1,47 @@
+/* position relative
+ketika suatu element diberikan property position:relative tanpa value
+maka element tsb akan naik dimensinya z nya tetapi dimensi x dan y nya tidak berrubah
+maka tidak berpengaruh terhadap element lain 
+ div{
+    width: 200px;
+    height:200px;
+}
+
+.satu{
+    background-color: lightgreen;
+}
+
+.dua{
+    background-color: violet;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+.tiga{
+    background-color: gold;
+} */
+
+/* position absolute
+ketika element di berikan property position:absolute tanpa value
+maka dimensi z nya akan berubah dan dimensi x dan y element di sekitarnya
+akan terpengaruh  */
+ div{
+    width: 200px;
+    height:200px;
+}
+
+.satu{
+    background-color: lightgreen;
+}
+
+.dua{
+    background-color: violet;
+    position: absolute;
+    left: 20px;
+}
+
+.tiga{
+    background-color: gold;
+}
+
