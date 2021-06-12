@@ -19,18 +19,22 @@ ol li a{
     color: red;
 }
 
-#p1{
-    color: orange;
+p#p1{
+    color: black;
 }
 
 .p2{
     color: red;
 }
 
-.cetak-tebal{
+body a.cetak-tebal{
     font-weight: bold;
 }
 
 p.cetak-tebal{
     font-size: 30px;
+}
+
+body ul li:nth-child(1) a{
+    color: blue;
 }

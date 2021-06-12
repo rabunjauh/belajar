@@ -54,12 +54,14 @@
 // var mhs3 = buatObjectMahasiswa('Mahasiswa3', '00908098', 'mahasiswa3@gmail.com', 'Teknik Perkapalan');
 // var mhs4 = buatObjectMahasiswa('Mahasiswa 4', '3143211', 'mahasiswa4@gmail.com', 'Akuntansi');
 
-// 3. Constructor
+// 3. Constructor <-- yang akan digunakan kedepannya
 // function Mahasiswa(nama, nrp, email, jurusan){
+//     var this = {};
 //     this.nama = nama;
 //     this.nrp = nrp;
 //     this.email = email;
 //     this.jurusan = jurusan;
+//     return this;
 // }
 
 // var mhs1 = new Mahasiswa('Mahasiswa 1', '45242534', 'mahasiswa@gmail.com', 'Teknik Informatika');

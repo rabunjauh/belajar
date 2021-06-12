@@ -66,10 +66,14 @@
 // console.log(arr2);
 
 // forEach
-// var angka = [1,2,3,4,5,6,7,8];
-// angka.forEach(function(e){
-//     console.log(e);
-// })
+var angka = [1,2,3,4,5,6,7,8];
+for( var i = 0; i < angka.length; i++) {
+    console.log(angka[i]);
+}
+
+angka.forEach(function(e){
+    console.log(e);
+})
 
 // arr.forEach(function(e, i){ // e, elemen, i = index 
 //     console.log(e, i);
