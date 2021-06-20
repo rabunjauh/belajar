@@ -1,0 +1,23 @@
+[
+    {
+        "nama": "Mahasiswa 1",
+        "nrp": "111111",
+        "email": "mahasiswa1@kampus.com",
+        "jurusan": "jurusan 1",
+        "idDosenWali": 1
+    },
+    {
+        "nama": "Mahasiswa 2",
+        "nrp": "222222",
+        "email": "mahasiswa2@kampus.com",
+        "jurusan": "jurusan 2",
+        "idDosenWali": 2
+    },
+    {
+        "nama": "Mahasiswa 3",
+        "nrp": "333333",
+        "email": "mahasiswa3@kampus.com",
+        "jurusan": "jurusan 3",
+        "idDosenWali": 3
+    }
+]
