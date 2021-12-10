@@ -13,7 +13,7 @@ require 'functions.php';
 //config
 //tentukan jumlah data yang akan ditampilkan dalam 1 halaman
 $recordPerPage = 10;
-$navNo = 10;
+$navNo = 15;
 //tentukan berapa total halaman nantinya
 //cara hitung = jumlah halaman = total data / data perhalaman
 //cari jumlah data
@@ -34,8 +34,21 @@ $currentPage = (isset($_GET["page"])) ? $_GET["page"] : 1;
 //karena setiap halaman berisi 2 data dan index dimulai dari nol.
 
 $initialData = ($recordPerPage * $currentPage) - $recordPerPage;
+$maxLeft = $currentPage - floor($navNo / 2);
+$maxRight = $currentPage + floor($navNo / 2);
 
+if ($maxLeft < 1) {
+	$maxLeft = 1;
+	$maxRight = $navNo;
+}
 
+if ($maxRight > $allPage) {
+	$maxLeft = $allPage - ($navNo);
+	if ($maxLeft < 1) {
+		$maxLeft = 1;
+	}
+	$maxRight = $allPage;
+}
 $employees = query("SELECT * FROM tblmas_employee LIMIT $initialData, $recordPerPage");
 
 //jika tombol search ditekan
@@ -61,23 +74,21 @@ if( isset($_POST["search"]) ) {
 	</form>
 
 	<!-- navigasi -->
-	<?php if($currentPage > 1) : ?>
-		<a href="?page=<?php echo $currentPage - 1; ?>">&lt;</a>
-	<?php endif; ?>
+	<?php if ($currentPage != 1) : ?>
+		<a href="?page=1">First</a>
+	<?php endif ?>
 
-	<?php for ($i=1; $i <= $allPage ; $i++) : ?>
+	<?php for ($i = $maxLeft; $i <= $maxRight ; $i++) : ?>
 		<?php if( $i == $currentPage) : ?> 
 		<a href="?page=<?php echo $i; ?>" style="font-weight: bold; color: red;"><?php echo $i; ?></a>
 	<?php else : ?>
 		<a href="?page=<?php echo $i ?>"><?php echo $i; ?></a>
 	<?php endif; ?>	
 	<?php endfor; ?>
-	
-	<?php if($currentPage < $allPage) : ?>
-		<a href="?page=<?php echo $currentPage + 1; ?>">&gt;</a>
-	<?php endif; ?>
 
-
+	<?php if ($currentPage != $allPage) : ?>
+		<a href="?page=<?= $allPage ?>">Last</a>
+	<?php endif ?>
 	<br>
 	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
