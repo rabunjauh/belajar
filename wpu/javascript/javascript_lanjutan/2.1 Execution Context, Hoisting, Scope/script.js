@@ -41,18 +41,16 @@
 // console.log(cetakURL('username'));
 
 
-var nama = 'Sandhika Galih';
-var username = '@sandhikagalih';
+// var nama = 'Sandhika Galih';
+// var username = '@sandhikagalih';
 
-function cetakURL() {
-  console.log(arguments);
-  var instagramURL = 'http://instagram.com/';
-  return instagramURL + username;
-}
+// function cetakURL() {
+//   console.log(arguments);
+//   var instagramURL = 'http://instagram.com/';
+//   return instagramURL + username;
+// }
 
-console.log(cetakURL('@doddyferdiansyah'));
-
-
+// console.log(cetakURL('@doddyferdiansyah'));
 
 
 
