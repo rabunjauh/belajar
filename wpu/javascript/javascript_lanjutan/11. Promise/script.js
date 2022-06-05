@@ -69,6 +69,7 @@
 
 
 // promise all
+// untuk menjalankan semua promise sekaligus
 // const film = new Promise(resolve => {
 //     setTimeout(() => {
 //         resolve([{
