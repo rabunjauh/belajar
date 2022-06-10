@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Constructor Function</title>
+</head>
+<body>
+    <script>
+        // // best practice nama constuctor function dimulai huruf besar
+        // function Person () {
+        //     // property
+        //     this.firstName = "";
+        //     this.lastName = "";
+
+        //     // method
+        //     this.sayHello = function (name) {
+        //         console.info(`Hello ${name}, my name is ${this.firstName}`);
+        //     }
+        // }
+
+        // const eko = new Person();
+        // eko.firstName = "first name";
+        // eko.lastName = "last name";
+        // eko.sayHello("budi");
+
+        // const budi = new Person();
+       
+       
+        // memberikan parameter pada constructor function
+        // best practice nama constuctor function dimulai huruf besar
+        function Person (firstName, lastName) {
+            // property
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            // method
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName}`);
+            }
+        }
+
+        const eko = new Person("first name", "last name");
+        eko.sayHello("budi");
+
+        const budi = new Person();
+
+    </script>
+</body>
+</html>
