@@ -28,32 +28,39 @@
 
 // var_dump($arr2);
 
-$mysqli = new mysqli("localhost", "root", "", "copier");
-$sql = 'SELECT * FROM tblfile_department';
-$result = $mysqli->query($sql);
-$row = $result->fetch_all();
-var_dump($row);
-    // foreach ($row as $r) {
+// $mysqli = mysqli_connect("localhost", "root", "", "copier");
+// $sql = 'SELECT * FROM tblfile_department';
+// $result = mysqli_query($mysqli, $sql);
+// $row = mysqli_fetch_assoc($result);
+// var_dump($row);
+// foreach ($row as $r) {
 
-    //     var_dump($r->iddept);
-    // }
-    // echo "<br>";
-    // echo "<br>";
-
-    
-    // $department = [
-    //     ['1', 'ENGINEERING', '1', 'RIO', '2014-12-12 15:15:32', 'BETI', '2020-01-21 14:59:36'],
-    //     ['2', 'FINANCE', '1', 'RIO', '2014-12-12 15:15:32', 'BETI', '2020-01-21 14:59:36'],
-    // ];
-    // var_dump($department);
+//     var_dump($r->iddept);
+// }
+// echo "<br>";
+// echo "<br>";
 
 
-    // for ($i = 0; $i < count($department); $i++) {
-    //     if ()
-    // }
+$department = [
+    '1', 'ENGINEERING', '1', 'RIO', '2014-12-12 15:15:32', 'BETI', '2020-01-21 14:59:36'
+    // ['2', 'FINANCE', '1', 'RIO', '2014-12-12 15:15:32', 'BETI', '2020-01-21 14:59:36'],
+];
+// var_dump($department);
+foreach ($department as $dept) {
+    echo $dept[0];
+    echo $dept[1];
+    echo $dept[2];
+    echo $dept[3];
+    echo '<br>';
+}
 
 
-    //  $arr1 = ['mustafa', 'wahyu', 'ichwan'];
+// for ($i = 0; $i < count($department); $i++) {
+//     if ()
+// }
+
+
+//  $arr1 = ['mustafa', 'wahyu', 'ichwan'];
 
 // $arr2 =  ['mustafa', 'wahyu', 'ichwan',  'andrew'];
 
@@ -103,18 +110,16 @@ var_dump($row);
 
 
 // $arr1 = [
-//     [
-//         "nama" => "mustafa",
-//         "department" => "MIS"
-//     ],
-//     [
-//         "nama" => "wahyu",
-//         "department" => "HSE"
-//     ]
+
+//     "nama" => "mustafa",
+//     "department" => "MIS"
+
+
 // ];
 
 // $arr2 = [];
 // foreach ($arr1 as $value) {
 //     array_push($arr2, $value);
 // }
-// var_dump($arr2);
+// print_r($arr1);
+// print_r($arr2);
