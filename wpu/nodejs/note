@@ -1,0 +1,19 @@
+4. REPL
+REPL = Read-Evaluate-Print-Loop
+
+Fitur utk mendebug
+untuk eksekusi program lewat command prompt
+
+caranya ketik node di git bash
+
+5. Menjalankan File Node
+
+6. Nodejs Module System
+Modules = Sekumpulan code yang dapat digunakan kembali, dengan antarmuka yang terdefinisi
+Node Modules = Fungsional yang simpel ataupun kompleks yang tersimpan di dalam sebuah file file javascript yg dpt kita gunakan kembali pd aplikasi node javascript
+
+- Core Modules = sudah ada di dalam nodejs - tinggal require
+- Local Modules = modules yang kita buat sendiri - export dan require
+- Third Party Modules / NPM Modules - tinggal require
+
+7. Nodejs Core Modules

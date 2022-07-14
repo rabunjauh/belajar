@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+        <li>List 5</li>
+    </ul>
+
+    <script>
+        const li = document.querySelectorAll("ul li");
+        li.forEach((l, i) => {
+            // saat list di click
+            l.onclick = function () {
+                // pengulangan list dari list pertama sampai list yang di click
+                li.forEach((l, j) => {
+                    // dari list pertama sampai list yang di click akan berubah warna backgroundnya menjadi merah
+                    if (j <= i) {
+                        li[j].style.backgroundColor = "red";
+                        console.log(j + 1);
+                    } else {
+                        li[j].style.backgroundColor = "white";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

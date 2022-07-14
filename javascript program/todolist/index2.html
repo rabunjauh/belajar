@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formTodo">
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="inputTodo">Todo</label></td>
+                    <td><input type="text" id="inputTodo"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="Submit" id="submit"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <h2>Todo List</h2>
+    <table>
+        <thead>
+
+        </thead>
+        <tbody id="tBody">
+            <tr>
+                <td>Action</td>
+                <td>Todo List</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    const todoList = [
+        "tes1",
+        "tes2"
+    ];
+
+    const addTodoList = document.getElementById('submit');
+
+    function addNewTodoList(index, todo) {
+        const tr = document.createElement('tr');
+            const tdDoneButton = document.createElement('td');
+            const doneButton = document.createElement('input');
+            doneButton.type = "button";
+            doneButton.value = "Done";
+            doneButton.onclick = function () {
+                todoList.splice(index, 1);
+                displayTodolist();
+            }
+            tdDoneButton.appendChild(doneButton);
+            tr.appendChild(tdDoneButton);
+            const tdTodoList = document.createElement("td");
+            tdTodoList.textContent = todo;
+            tr.appendChild(tdTodoList);
+            const tBody = document.getElementById("tBody");
+            tBody.appendChild(tr);
+    }
+    function displayTodolist() {
+        const tBody = document.getElementById("tBody");
+        while(tBody.firstChild) {
+            tBody.removeChild(tBody.firstChild);
+        } 
+        for(let i = 0; i < todoList.length; i++) {
+            addNewTodoList(i, todoList[i]);
+        }
+    }
+    addTodoList.onclick = function (e) {
+        e.preventDefault();
+        const inputTodoValue = document.getElementById('inputTodo').value;
+        
+        todoList.push(inputTodoValue);
+        displayTodolist();
+         const inputTodo = document.getElementById("inputTodo");
+         inputTodo.value = "";
+
+    }
+
+    displayTodolist();
+</script>
+</html>

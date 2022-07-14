@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*  */
+        .star_rating {
+            user-select: none;
+        }
+
+        .star {
+            font-size: 3rem;
+            color:#ff9800;
+            background-color: unset;
+            border:none;
+        }
+
+        .star:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="star_rating">
+        <button class="star">&#9733</button>
+        <button class="star">&#9734</button>
+        <button class="star">&#9734</button>
+        <button class="star">&#9734</button>
+        <button class="star">&#9734</button>
+        
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll("button");
+        stars.forEach((star, i) => {
+            star.onclick = function() {
+                stars.forEach((star, j) => {
+                    if (j <= i) {
+                        star.innerHTML = "&#9733";
+                    } else {
+                        star.innerHTML = "&#9734";
+                    }
+                })
+            }
+        });
+    </script>
+</body>
+</html> 

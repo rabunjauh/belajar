@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="inputAngka" value="0">
+    </form>
+    <div>
+        <button>C</button>
+        <button>Del</button>
+        <button id="1">1</button>
+        <button id="2">2</button>
+        <button id="3">3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>%</button>
+        <button>+</button>
+        <button>x</button>
+        <button>-</button>
+        <button>/</button>
+        <button id="equal">=</button>
+    </div>
+
+    <script>
+        const input1 = [0];
+       
+        const buttons = document.querySelectorAll("button");
+        buttons.forEach(button => {
+            button.onclick = function() {
+                input.push(parseInt(button.innerText));
+
+                console.log(input);
+            }
+        });
+    </script>
+</body>
+</html>
