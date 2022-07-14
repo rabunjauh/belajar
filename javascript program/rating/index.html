@@ -15,11 +15,12 @@
         body {
             height: 100vh;
             display: flex;
+            margin: auto;
             justify-content: center;
             align-items: center;
         }
 
-        /*  */
+        /* agar text tidak bisa diselect */
         .star_rating {
             user-select: none;
         }
@@ -34,20 +35,22 @@
         .star:hover {
             cursor: pointer;
         }
+
     </style>
 </head>
 <body>
+
     <div class="star_rating">
         <button class="star">&#9733</button>
         <button class="star">&#9734</button>
         <button class="star">&#9734</button>
         <button class="star">&#9734</button>
         <button class="star">&#9734</button>
-        
     </div>
-
+    <div id ="text"></div>
     <script>
         const stars = document.querySelectorAll("button");
+        const text = document.getElementById("text");
         stars.forEach((star, i) => {
             star.onclick = function() {
                 stars.forEach((star, j) => {
@@ -57,6 +60,17 @@
                         star.innerHTML = "&#9734";
                     }
                 })
+                if (i === 0) {
+                    text.textContent = "Sangat Buruk";
+                } else if (i === 1) {
+                    text.textContent = "Buruk";
+                } else if (i  === 2){
+                    text.textContent = "Cukup";
+                } else if (i  === 3){
+                    text.textContent = "Baik";
+                } else {
+                    text.textContent = "Memuaskan";
+                }
             }
         });
     </script>
