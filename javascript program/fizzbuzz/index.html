@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fizzbuzz(n) {
+        let deret = ``;
+        for (i = 1; i <= n; i++) {
+            if (i%3 == 0) {
+                deret += `fizz `;
+            } else if (i%5 == 0) {
+                deret += `buzz `
+            } else if (i%15 == 0){
+                deret += `fizzbuzz `;
+            } else {
+                deret += `${i} `;
+            }
+        }
+        console.log(deret);
+    }
+
+    fizzbuzz(100);
+    </script>
+</body>
+</html>
