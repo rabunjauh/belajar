@@ -17,3 +17,23 @@ Node Modules = Fungsional yang simpel ataupun kompleks yang tersimpan di dalam s
 - Third Party Modules / NPM Modules - tinggal require
 
 7. Nodejs Core Modules
+
+8. NPM
+npm init
+untuk menginisiasi folder project agar dpt menjalankan NPM
+
+menjalan kan script di dalam package.json
+script default: npm start / npm test
+selain script default: npm run ~script
+
+npm: 
+a. validator utk melakukan validasi string
+npm i validator
+untuk install versi tertentu: npm i validator@13.5.2
+uninstall: npm uninstall validator
+b. chalk
+c. nodemon
+
+npm yang di install secara global tidak akan ikut terdeploy. jika ingin npm ikut terdeploy install npm secara lokal
+npm install --save-dev nodemon
+untuk menggunakan npm secara lokal harus dijalankan di dalam script
