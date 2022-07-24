@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- buat buttonnya -->
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <script>
+        // ambil buttonnya
+        let buttons = document.querySelectorAll("button");
+        // buat pengulangan pertama untuk cek button yg di click
+        buttons.forEach((button, i) => {
+            // add event onclick
+            button.onclick = function() {
+                // pengulangan kedua untuk set attribute false selain button yg di click
+                buttons.forEach((button, j) => {
+                    if (i !== j) {
+                        button.disabled = true;
+                    }
+                });  
+            }
+        });
+    </script>
+</body>
+</html>

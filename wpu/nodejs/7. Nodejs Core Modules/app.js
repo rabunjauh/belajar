@@ -1,31 +1,29 @@
-// Core Modules
-// File System
 const fs = require('fs');
 
-// Menuliskan string ke file secara synchronous
-// try {
-//     fs.writeFileSync('data/test.txt', 'Hello World secara Synchronous');
-// } catch(e) {
+
+// menuliskan string ke file (synch)
+// try {    
+//     fs.writeFileSync('test.txt', 'Hello World sync');
+// } catch (e) {
 //     console.log(e);
 // }
 
-
-// Menuliskan string ke file secara asynchronous
-// fs.writeFile('data/tes.txt', 'Hello World secara async', (err) => {
-//     console.log(err);
+// menulis string ke file (asynch)
+// fs.writeFile('data/test.txt', 'Hello World async', (e) => {
+//     console.log(e);
 // });
 
-// Membaca isi file secara sync
-// const data = fs.readFileSync('data/tes.txt', 'utf-8');
+// membaca isi file
+// const data = fs.readFileSync('data/test.txt', 'utf-8');
 // console.log(data);
 
-// Membaca isi file secara async
-// fs.readFile('data/tes.txt', 'utf-8', (err, data) => {
-//     if (err) throw err;
+// membaca file async
+// fs.readFile('data/test.txt', 'utf-8', (err, data) => {
+//     if(err) throw err;
 //     console.log(data);
 // })
 
-// Readline
+// readline
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -33,19 +31,17 @@ const rl = readline.createInterface({
 });
 
 rl.question('Masukkan nama anda: ', (nama) => {
-    rl.question('Masukkan no HP anda: ', (noHP) => {
+    rl.question('Masukkan no hp anda: ', (noHP) => {
         const contact = {
             nama,
-            noHP,
-        };
-
-        const file = fs.readFileSync('data/contacts.json', 'utf-8');
+            noHP
+        }
+        const file = fs.readFileSync('data/contact.json', 'utf-8')
         const contacts = JSON.parse(file);
-
         contacts.push(contact);
-        fs.writeFileSync('data/contacts.json', JSON.stringify(contacts));
-        console.log('Terimakasih telah memasukkan data');
+        fs.writeFileSync('data/contact.json', JSON.stringify(contacts));
+        console.log('Terimakasih telah mengisi data');
         rl.close();
+
     });
 });
-

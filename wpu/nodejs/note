@@ -36,4 +36,30 @@ c. nodemon
 
 npm yang di install secara global tidak akan ikut terdeploy. jika ingin npm ikut terdeploy install npm secara lokal
 npm install --save-dev nodemon
-untuk menggunakan npm secara lokal harus dijalankan di dalam script
+untuk menggunakan npm secara lokal harus dijalankan di dalam 
+
+11. Membuat Contact App bagian 2
+-perintah init folder agar singkat tambah -y dibelakang
+
+yargs 
+
+syntac
+yargs.command('add', 'Menambahkan contact baru', () => {}, (argv) => {
+    console.log(argv.nama);
+})
+
+yargs.parse();
+
+cara run
+node app add --nama="mustafa"
+
+untuk melihat command yang ada 
+node app --help
+
+untuk melihat command apa saja yg bisa diinput
+node app add --help
+
+jika saat di ketik command node app add tanpa argument muncul warning
+demandCommand() 
+
+
