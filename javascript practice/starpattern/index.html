@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Output
+        // * * * * * 
+        // * * * * * 
+        // * * * * * 
+        // * * * * * 
+        // * * * * *
+        
+        // Code
+        // let stars = '';
+        
+        // for(i = 1; i <= 5; i++) {
+        //     for(j = 1; j <= 5; j++) {
+        //         stars += '* ';
+        //     }
+        //     stars += '\n';
+        // }
+        // console.log(stars);
+
+        // Output
+        // *
+        // * *
+        // * * *
+        // * * * *
+        // * * * * *
+        
+        // Code
+        // let stars = '';
+        // for(i = 1; i <= 5; i++) {
+        //     for(j = 1; j <= i; j++) {
+        //         stars += '* ';
+        //     }
+        //     stars += '\n';
+        // }
+        // console.log(stars);
+
+        // Output
+        // * * * * *
+        // * * * *
+        // * * *
+        // * *
+        // *
+        
+        // Code
+        // let stars = '';
+        // for(i = 5; i >= 1; i--) {
+        //     for(j = 1; j <= i; j++) {
+        //         stars += '* ';
+        //     }
+        //     stars += '\n';
+        // }
+        // console.log(stars);
+
+        // Output
+        //         *
+        //       * *
+        //     * * *
+        //   * * * *
+        // * * * * *
+
+        // Code
+        // let stars = '';
+        // for(i = 1; i <= 5; i++) {
+        //     for(j = 0; j <= 5 - i; j++) {
+        //         stars += "  ";
+        //     }
+
+        //     for(k = 0; k < i; k++) {
+        //         stars += " *";
+        //     }
+        //     stars += "\n";
+        // }
+        // console.log(stars);
+
+        // Output
+        // * * * * *
+        //   * * * *
+        //     * * *
+        //       * *
+        //         *
+
+        // Code
+        
+        // let stars = '';
+        // for (i = 5; i >= 1; i--) {
+        //     for(j = 1; j <= 5 - i; j++) {
+        //         stars += "  ";
+        //     }
+
+        //     for(k = i; k >= 1; k--) {
+        //         stars += "&#9733 ";
+        //     }
+        //     stars += '\n';
+        // }
+        // console.log(stars);
+
+        // output
+        //         *
+        //       * * *
+        //     * * * * *
+        //   * * * * * * *
+        // * * * * * * * * *
+
+        // let stars = '';
+        // for(i = 1; i <= 5; i++) {
+        //     for(j = 1; j <= 2 * 5 - 1; j++ ) {
+        //         if (j >= 5 - (i - 1) && j <= 5 + (i - 1)) {
+        //             stars += "* ";
+        //         }
+        //         else {
+        //             stars += "  ";
+        //         }
+        //     }
+        //     stars += '\n';
+        // }
+        // console.log(stars);
+
+        // Output   
+        // * * * * * * * * *
+        //   * * * * * * *
+        //     * * * * *
+        //       * * *
+        //         *
+
+    // Code solusi 1
+
+    // let stars = '';
+
+    // for (i = 5; i >= 1; i--) {
+    //     for(j = 2 * 5 - 1; j >= 1; j--) {
+    //         if (j <= 5 + (i - 1) && j >= 5 - (i - 1)) {
+    //             stars += '* ';
+    //         } else {
+    //             stars += '  ';
+    //         }
+
+    //     }
+    //     stars += '\n';
+    // }
+    // console.log(stars);
+
+    // Output
+    // * * * * * * * * *
+    //   * * * * * * *
+    //     * * * * *
+    //       * * *
+    //         *
+
+    // Code solusi 2
+    // let stars = '';
+
+    // for(i = 1; i <= 5; i++) {
+    //     for(j = 1; j <= 2 * 5 - 1; j++) {
+    //         if(j >= i && j <= 2 * 5 - i) {
+    //             stars +=  '* ';
+    //         }else {
+    //             stars += '  ';
+    //         }
+    //     }
+    //     stars += '\n';
+    // }
+    // console.log(stars);
+
+
+
+    // Output
+    // *               * 
+    // * *           * *
+    // * * *       * * *
+    // * * * *   * * * *
+    // * * * * * * * * *
+
+    // Code
+    // let stars = '';
+
+    // for(i = 1; i <= 5; i++) {
+    //     for(j = 1; j <= 2 * 5 - 1; j++) {
+    //         if (j > i && j < 5 * 2 - i) {
+    //             stars += `  `;
+    //         }else {
+    //             stars += "* ";
+    //         }
+    //     }
+    //     stars += '\n';
+    // }
+    // console.log(stars);
+
+    // Output
+    // * * * * *
+    // *       *
+    // *       *
+    // *       *
+    // *       *
+    // * * * * *
+
+    // Code
+
+    // let stars = '';
+    
+    // for(i = 1; i <= 5; i++) {
+    //     for(j = 1; j <= 5; j++) {
+    //         if (i >= 2 && i < 5){
+    //             if(j >= 2 && j < 5){
+    //             stars += "  ";
+    //             } else{
+    //                 stars += "* "
+    //             }
+    //         }else{
+    //             stars += "* ";
+    //         }
+    //     }
+    //     stars += '\n';
+    // }
+    // console.log(stars);
+    </script>
+</body>
+</html>

@@ -62,4 +62,14 @@ node app add --help
 jika saat di ketik command node app add tanpa argument muncul warning
 demandCommand() 
 
+14. Express JS
+Unopinionated Framework 
+- tidak ada aturan baku utk melakukan sesuatu
+- flexible
+- Menentukan -sendiri struktur aplikasi
+- Bongkar pasang middleware
+
+
+
+
 
