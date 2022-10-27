@@ -1,0 +1,16 @@
+TIPE DATA
+type                format              comment
+integer             int32               signed 32 bit
+integer             int64				signed 64 bits(aka long)
+number				float
+number				double
+string				
+string				byte				base64 encoded characters
+string				binary				any sequence of octets
+boolean
+string				date				as defined by full-date - RFC3339
+string				date-time			as defined by date-time -
+string				password			as hint to UIs to obscure input
+
+
+DOCUMENT

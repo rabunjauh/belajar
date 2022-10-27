@@ -1,0 +1,48 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "TodoList RESTful API",
+        "description": "OpenAPI for TodoList RESTful API",
+        "version": "1",
+        "contact": {
+            "name": "Mustafa",
+            "email": "mustafa.visionet@gmail.com",
+            "url": "https://www.mustafa.com"
+        },
+        "license": {
+            "name": "APACHE 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE 2.0"
+        }
+    },
+    "servers": [
+        {
+            "url": "https://{environment}.programmerzamannow.com/api/v1",
+            "description": "TodoList RESTful API Server",
+            "variables": {
+                "environment":{
+                    "default": "dev",
+                    "description": "Server Environment",
+                    "enum": [
+                        "dev",
+                        "qa",
+                        "prod"
+                    ]
+                }
+            }
+        }
+    ],
+    "externalDocs": {
+        "description": "Youtube",
+        "url": "http://youtube.com"
+    },
+    "paths": {
+        "/todolist": {
+            "get": {},
+            "post": {}
+        },
+        "/todolist/{todoListId}": {
+            "put":{},
+            "delete": {}
+        }
+    }
+}

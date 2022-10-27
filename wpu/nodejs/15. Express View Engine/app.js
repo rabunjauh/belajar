@@ -1,9 +1,14 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
+const { loadContact, findContact } = require('./utils/contacts.js');
+
+
+const app = express();
+const port = 3000;
 
 // gunakan ejs
 app.set('view engine', 'ejs');
+app.use(expressLayouts);
 
 app.get('/', (req, res) => {
   const mahasiswa = [
@@ -23,18 +28,37 @@ app.get('/', (req, res) => {
   res.render('index', {
     nama: 'Mustafa', 
     title: 'Halaman Home',
-    mahasiswa
+    mahasiswa,
+    layout: 'layouts/main-layout'
     });
 });
 
 app.get('/about', (req, res) => {
-  res.render('about');
+  res.render('about', {
+    title: 'About',
+    layout: 'layouts/main-layout'    
+  });
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact');
+  const contacts = loadContact();
+  res.render('contact', {
+    title: 'Contact',
+    layout: 'layouts/main-layout',
+    contacts
+  });
 });
 
+app.get('/contact/:nama', (req, res) => {
+  const contact = findContact(req.params.nama);
+  res.render('detail', {
+    title: 'Halaman Detail Contact',
+    layout: 'layouts/main-layout',
+    contact
+  });
+});
+
+// jika user memilih url yang tidak ada akan diarahkan ke halaman 404
 app.use('/', (req, res) => {
     res.status(404);
     res.send('404');

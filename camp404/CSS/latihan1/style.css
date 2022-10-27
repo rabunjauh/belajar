@@ -1,0 +1,29 @@
+ul {
+    background-color: yellow;
+    list-style-type: none;
+}
+
+li a {
+    font-family: "Open Sans";
+    color: #c70039;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding: 25px 30px 25px 100px;
+}
+
+#logo {
+    font-family: "Castellar";
+    color: #b30033;
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 5px 1px 10px #c70039;
+    padding: 10px 30px 25px 100px;
+}
+
+li {
+    float: left;
+}
