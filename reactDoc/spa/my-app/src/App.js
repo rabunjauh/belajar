@@ -1,9 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from "react";
+
+export class Header extends Component {
+  render() {
+    return (
+      <h2>Header component</h2>
+    )
+  }
+}
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         

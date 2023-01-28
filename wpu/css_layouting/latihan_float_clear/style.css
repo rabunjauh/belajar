@@ -1,0 +1,300 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  main: "";
+  main: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* end of css reset */
+
+body {
+  font: 16px/28px arial, sans-serief;
+  background-color: #eaeaea;
+  color: #333;
+  background-image: url(img/trees.png);
+}
+
+.container {
+  width: 960px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.header {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.header .judul {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header ul li {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.header a {
+  text-decoration: none;
+  color: salmon;
+  padding: 3px;
+}
+
+.header a:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+.hero {
+  height: 400px;
+  background-image: url(img/hero.jpg);
+  background-size: cover;
+  background-position: 0 -80px;
+  border-top: 5px solid salmon;
+  border-bottom: 5px solid lightskyblue;
+}
+
+.main {
+  width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.sidebar {
+  width: 300px;
+  float: right;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  font-weight: bold;
+  color: #666;
+}
+
+.sidebar img {
+  width: 70px;
+  height: 70px;
+  float: left;
+  padding-right: 10px;
+}
+
+.sidebar p {
+  font: 12px/18px arial;
+}
+
+.main h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.main .penulis {
+  font-size: 11px;
+  margin-top: -5px;
+}
+
+.main .penulis a {
+  color: salmon;
+  text-decoration: none;
+}
+
+.main p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.footer {
+  background-color: #333;
+  padding: 10px;
+}
+
+.footer .copy {
+  color: #eaeaea;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* April 20, 2011
+A new micro clearfix hack
+The clearfix hack is a popular way to contain floats without resorting to using presentational markup. This article presents an update to the clearfix method that further reduces the amount of CSS required.
+
+Demo: Micro clearfix hack
+
+Known support: Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+
+
+The “micro clearfix” method is suitable for modern browsers and builds upon Thierry Koblentz’s “clearfix reloaded”, which introduced the use of both the :before and :after pseudo-elements.
+
+Here is the updated code (I’ve used a shorter class name too): */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+/* This “micro clearfix” generates pseudo-elements and sets their display to table. This creates an anonymous table-cell and a new block formatting context that means the :before pseudo-element prevents top-margin collapse. The :after pseudo-element is used to clear the floats. As a result, there is no need to hide any generated content and the total amount of code needed is reduced.
+
+Including the :before selector is not necessary to clear the floats, but it prevents top-margins from collapsing in modern browsers. This has two benefits:
+
+It ensures visual consistency with other float containment techniques that create a new block formatting context, e.g., overflow:hidden
+It ensures visual consistency with IE 6/7 when zoom:1 is applied.
+N.B.: There are circumstances in which IE 6/7 will not contain the bottom margins of floats within a new block formatting context. Further details can be found here: Better float containment in IE using CSS expressions.
+
+The use of content:" " (note the space in the content string) avoids an Opera bug that creates space around clearfixed elements if the contenteditable attribute is also present somewhere in the HTML. Thanks to Sergio Cerrutti for spotting this fix. An alternative fix is to use font:0/0 a.
+
+Legacy Firefox
+Firefox < 3.5 will benefit from using Thierry’s method with the addition of visibility:hidden to hide the inserted character. This is because legacy versions of Firefox need content:"." to avoid extra space appearing between the body and its first child element, in certain circumstances (e.g., jsfiddle.net/necolas/K538S/.)
+
+Alternative float-containment methods that create a new block formatting context, such as applying overflow:hidden or display:inline-block to the container element, will also avoid this behaviour in legacy versions of Firefox.
+
+Nicolas lives and works in California. He's on Twitter and shares software using GitHub. */
