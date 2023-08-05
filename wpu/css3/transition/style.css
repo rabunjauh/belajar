@@ -1,0 +1,15 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: salmon;
+  transition: 1s;
+}
+
+.kotak:hover {
+  transform: rotate(180deg);
+}

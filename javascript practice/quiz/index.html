@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Quiz</h1>
+    <p class="quiz"></p>
+    <script>
+      const questions = [
+        [
+          "versi ECMAScript berapa yang terbengkalai atau gagal rilis",
+          "A. ES2",
+          "B. ES6",
+        ],
+        ["Pilih penulisan Javascript yang benar", "A. Embed", "B. Eksternal"],
+      ];
+
+      // for (i = 0; i < questions.length; i++) {
+      //   const p = document.getElementById("quiz");
+      //   console.log(questions[i][0]);
+      // }
+
+      // questions.forEach((e, index) => {
+      //   const p = document.getElementsByClassName("quiz");
+      //   p.textContent = `${index + 1}. ${e[0]}:`;
+      //   // p.innerHTML = "tes";
+      //   // document.body.appendChild(p);
+      //   // console.log(e[0]);
+      // });
+
+      questions.forEach((e, index) => {
+        const p = document.createElement("p");
+        const buttonA = document.createElement("button");
+        const buttonB = document.createElement("button");
+        buttonA.textContent = e[1];
+        buttonB.textContent = e[2];
+
+        p.textContent = `${index + 1}. ${e[0]}:`;
+        p.appendChild(buttonA);
+        p.appendChild(buttonB);
+
+        if (index < 1) {
+          p.style.display = "block";
+
+          document.addEventListener("click", function (e) {
+            if (e.target.type == "submit") {
+              e.target.parentNode.nextElementSibling.style.display = "block";
+            }
+          });
+        } else {
+          p.style.display = "none";
+        }
+        document.body.appendChild(p);
+      });
+    </script>
+    <p id="finish" style="display: none">Selesai</p>
+  </body>
+</html>

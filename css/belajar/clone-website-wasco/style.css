@@ -1,0 +1,244 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+}
+
+/* div {
+  border: 1px solid black;
+} */
+
+.header .top-header-desc .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header .top-header-desc .container .logo img {
+  width: 100px;
+  height: 87.4375px;
+  cursor: pointer;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact-linkedin,
+.contact-email {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #0065a4;
+  display: flex;
+  cursor: pointer;
+  margin: auto 5px;
+}
+
+.contact-linkedin img,
+.contact-email img {
+  width: 22px;
+  height: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+/* .contact input {
+  margin: 35px;
+  width: 182px;
+  height: 33px;
+  font-size: 14px;
+  border: 1px solid #808080;
+  padding: 5px;
+  box-sizing: border-box;
+} */
+
+.search form {
+  display: flex;
+}
+
+.search input {
+  border-radius: 0;
+  border: 1px solid #808080;
+  margin-left: 35px;
+  width: 182px;
+  height: 33px;
+  font-size: 14px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.contact .search button {
+  background-color: #fff;
+  border: 1px solid #808080;
+  border-left: 0;
+  height: 33px;
+  width: 33px;
+  display: block;
+  cursor: pointer;
+}
+
+.contact p {
+  margin: auto;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.contact button {
+  height: 28px;
+  width: 35px;
+}
+
+.nav-base {
+  width: 100%;
+  height: 30px;
+  background-color: #39ac37;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li {
+  height: 30px;
+  width: 250px;
+  text-align: center;
+  display: block;
+  color: #fff;
+}
+
+li:nth-child(2n-1) {
+  background-color: #fdb913;
+}
