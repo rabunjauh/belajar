@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Latihan Belajar React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+
+      function HomePage() {
+        const [count, setCount] = React.useState(0);
+
+        function decrease() {
+          setCount(count - 1);
+        }
+
+        function increase() {
+          setCount(count + 1);
+        }
+
+        function reset() {
+          setCount(0);
+        }
+        return (
+          <>
+            <button name="decrease">-</button>
+            {count}
+            <button name="increase">+</button>
+            <p>
+              <button name="reset">reset</button>
+            </p>
+          </>
+        );
+      }
+
+      root.render(<HomePage />);
+    </script>
+  </body>
+</html>
