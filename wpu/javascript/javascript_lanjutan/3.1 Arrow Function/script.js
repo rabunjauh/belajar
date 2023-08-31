@@ -2,7 +2,6 @@
 // const tampilNama = function (nama) {
 //     return `halo ${nama}`;
 // }
-
 // console.log(tampilNama('Nama'));
 
 // Arrow function adalah versi lebih ringkas dari function expression
@@ -19,11 +18,10 @@
 
 // console.log(tampilNama('pagi', 'nama'));
 
-// versi lebih ringkas tanpa tanda kurung pada parameter jika 
+// versi lebih ringkas tanpa tanda kurung pada parameter jika
 // hanya ada 1 parameter dan jika isi nya hanya return
 // tidak perlu di tulis return nya dan kurung kurawal (curly brackets / "{}")
 // disebut implisit return
-
 // const tampilNama = nama => `halo ${nama}`;
 
 // console.log(tampilNama('Nama'));
@@ -34,7 +32,7 @@
 // console.log(tampilNama());
 
 // Menghitung jumlah huruf dalam array
-let mahasiswa = ['Mahasiswa1', 'Mahasiswa2', 'Mahasiswa3'];
+let mahasiswa = ["Mahasiswa1", "Mahasiswa2", "Mahasiswa3"];
 // let jumlahHuruf = mahasiswa.map(function (nama){
 //     return nama.length;
 // });
@@ -44,9 +42,6 @@ let mahasiswa = ['Mahasiswa1', 'Mahasiswa2', 'Mahasiswa3'];
 
 // memetakan sebagai object: curly brackets / "{}" harus di kurung menggunakan parentheses / "()"
 
-let jumlahHuruf = mahasiswa.map(nama => ({ nama, jmlHuruf: nama.length}));
+let jumlahHuruf = mahasiswa.map((nama) => ({ nama, jmlHuruf: nama.length }));
 // console.log(jumlahHuruf);
 console.table(jumlahHuruf);
-
-
-
