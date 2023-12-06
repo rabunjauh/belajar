@@ -1,40 +1,44 @@
-body{
-    font-family: arial;
+body {
+  font-family: arial;
 }
 
-
-h1, h2{
-    color: green;
+h1,
+h2 {
+  color: green;
 }
 
-h2{
-    font-style: italic;
+h2 {
+  font-style: italic;
 }
 
-ul li a{
-    color: orange;
+ul {
+  font-size: 100px;
 }
 
-ol li a{
-    color: red;
+ul li a {
+  color: orange;
 }
 
-p#p1{
-    color: black;
+ol li a {
+  color: red;
 }
 
-.p2{
-    color: red;
+p#p1 {
+  color: black;
 }
 
-body a.cetak-tebal{
-    font-weight: bold;
+.p2 {
+  color: red;
 }
 
-p.cetak-tebal{
-    font-size: 30px;
+body a.cetak-tebal {
+  font-weight: bold;
 }
 
-body ul li:nth-child(1) a{
-    color: blue;
+p.cetak-tebal {
+  font-size: 30px;
+}
+
+body ul li:nth-child(1) a {
+  color: blue;
 }
