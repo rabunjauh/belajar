@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  /* Note: 1.313 = 21px / 16px*/
+  font-size: 1.313rem;
+}
+
+.container {
+  padding: 100px 0;
+  background-color: #23424a;
+  color: #dde2e3;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.intro-content {
+  width: 80%;
+  /* Note: this div will stop bigger after 1100px  */
+  max-width: 1100px;
+  /* Note: make div justify center */
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.container-text {
+  background-color: red;
+  /* Note: this div will make text always 50% of container*/
+  width: 50%;
+}
+
+.container-text p {
+  margin-bottom: 3em;
+}
+
+a {
+  display: inline-block;
+  background-color: #38cfd9;
+  text-decoration: none;
+  color: #072a2d;
+  font-weight: 700;
+  font-size: 1.313rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+  min-width: 5rem;
+}
+
+a:hover,
+a:focus {
+  opacity: 0.75;
+}

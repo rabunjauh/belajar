@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.313;
+  margin: 0;
+}
+
+.hero {
+  background-color: #23424a;
+  padding: 100px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.container-text {
+  width: 50%;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.container-text p {
+  margin-bottom: 3em;
+}
+
+.hero__img {
+  align-self: flex-start;
+}
+
+.btn {
+  display: inline-block; /* for keep button not collapse when display to small */
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  background-color: #38cfd9;
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+}
+
+a:hover,
+a:focus {
+  opacity: 0.75;
+}
+
+.row {
+  /* flex container */
+  display: flex;
+  /* to create gap between flex items. another solution in line 68 */
+  /* gap: 30px; */
+}
+
+.col {
+  align-items: center;
+  /* flex items */
+  /* as default flex items will fit the content if we want to keep column width even no content in it set width to 100%*/
+  width: 100%;
+}
+
+.col + .col {
+  margin-left: 30px;
+}
+
+section {
+  text-align: center;
+}
+
+.three-col {
+  padding: 3em 0;
+}
+
+.three-col h2 {
+  color: #87629a;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+.two-col {
+  padding: 3em 0;
+  background-color: #136c72;
+  color: white;
+}
