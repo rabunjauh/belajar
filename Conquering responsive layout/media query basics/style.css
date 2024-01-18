@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+.example {
+  width: 90%;
+  margin: 5em auto;
+  padding: 10em 0;
+  background-color: steelblue;
+}
+
+/* 600px or bigger / 600px to ~*/
+@media (min-width: 600px) {
+  .example {
+    background-color: olivedrab;
+  }
+}
+
+/* 600px or smaller / 0 to 600px */
+/* @media (max-width: 600px) {
+  .example {
+    background-color: olivedrab;
+  }
+} */

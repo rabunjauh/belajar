@@ -1,4 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+/* 
+////// For this challenge ///////
+
+- You will have to modify the HTML
+
+- You can add new classes in the HTML
+  if you need to
+
+// Requirements
+1. The headings in the first row must be
+   a different color
+2. The two .col at the bottom must go next
+   to one another
+3. The section at the bottom should have
+   a dark background color and a different
+   color of text
+4. I've removed the "gap" that I created,
+   so you'll have to add it back in
+
+   */
 
 *,
 *::before,
@@ -7,66 +26,73 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.313;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+img {
+  max-width: 100%;
 }
 
 .hero {
-  background-color: #23424a;
   padding: 100px 0;
+  background-color: #23424a;
+  color: #fff;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 1100px;
+.hero__text {
+  width: 62%;
 }
 
-.container-text {
-  width: 50%;
-  color: white;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.container-text p {
+.hero p {
   margin-bottom: 3em;
 }
 
 .hero__img {
+  width: 30%;
   align-self: flex-start;
+  border: 4px solid red;
 }
 
 .btn {
-  display: inline-block; /* for keep button not collapse when display to small */
-  font-weight: 700;
-  color: black;
+  display: inline-block;
   text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
   background-color: #38cfd9;
-  padding: 0.8rem 1.5rem;
+  padding: 0.75em 2em;
   border-radius: 100px;
 }
 
-a:hover,
-a:focus {
+.btn:hover,
+.btn:focus {
   opacity: 0.75;
 }
 
+h1 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 4px solid blue;
+}
+
 .row {
-  /* flex container */
+  /* display: flex => flex container */
   display: flex;
-  /* to create gap between flex items. another solution in line 68 */
-  /* gap: 30px; */
+  justify-content: space-between;
+  /* can't use yet */
+  /* gap: 100px; */
 }
 
 .col {
-  align-items: center;
-  /* flex items */
-  /* as default flex items will fit the content if we want to keep column width even no content in it set width to 100%*/
+  /* these are now flex items */
   width: 100%;
 }
 
@@ -74,22 +100,47 @@ a:focus {
   margin-left: 30px;
 }
 
-section {
+.three-col {
+  padding: 3em 0;
   text-align: center;
 }
 
-.three-col {
-  padding: 3em 0;
-}
-
 .three-col h2 {
-  color: #87629a;
+  color: #136c72;
+  font-weight: 900;
   font-size: 2.25rem;
-  font-weight: 800;
 }
 
 .two-col {
   padding: 3em 0;
   background-color: #136c72;
-  color: white;
+  color: #fff;
+  text-align: center;
+}
+
+.left {
+  border: 2px solid blue;
+  width: 70%;
+  padding: 1em;
+  color: #136c72;
+}
+
+.left h2 {
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+.right {
+  border: 2px solid red;
+  text-align: center;
+  background-color: #136c72;
+  color: #fff;
+  width: 30%;
+  padding: 1em;
+}
+
+.content {
+  margin: 2em 0;
+  display: flex;
+  padding: 0 4em;
 }
