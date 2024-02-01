@@ -1,0 +1,419 @@
+List
+Unordered: • 
+Ordered: 1,2,3
+1
+
+atribute type
+
+Menggunakan angka dalam urutan item (default).
+
+a
+
+Menggunakan huruf kecil dalam urutan item.
+
+A
+
+Menggunakan huruf besar dalam urutan item.
+
+i
+
+Menggunakan huruf romawi kecil dalam urutan item.
+
+I
+
+Menggunakan huruf romawi besar dalam urutan item.
+
+atribut start
+
+atribut reversed
+
+
+
+Long Quotations
+Jika pada konten kita memiliki sebuah kutipan ataupun sebuah testimonial, kita dapat gunakan format long quotations dengan menggunakan tags <blockquote>. Konten di dalam elemen <blockquote> ini dapat berupa sebuah paragraf, heading, ataupun list.
+
+atribut cite untuk menentukan sumber URL dari sebuah kutipan (jika kutipan tersebut bersumber dari sebuah situs website). Namun, tidak ada tampilan yang berbeda pada browser secara kasat mata.
+Standarnya, pada browser sebuah teks yang diberi markup <cite> akan ditampilkan dengan huruf miring (italic).
+
+
+
+Preformatted Text
+elemen yang dapat kita gunakan untuk menampilkan konten sesuai yang kita tulis pada text editor. Untuk menggunakannya, kita gunakan elemen <pre> sebagai pembungkus kontennya.
+
+
+
+Figure
+Elemen <figure> digunakan untuk mempresentasikan konten tersendiri (self-contained content), seperti ilustrasi, diagram, foto, atau bisa juga sebuah baris kode. Banyak hal yang dapat digunakan dalam elemen ini. 
+
+Elemen ini digunakan untuk mengelompokkan blok konten yang dapat dipindahkan posisinya dari blok utama sebuah dokumen tanpa mempengaruhi arti dari induk dokumen.
+
+Dalam elemen figure, kita dapat menuliskan elemen <figcaption> sebagai sebuah caption (judul) untuk konten tersebut
+
+
+
+Inline 
+
+Anchor
+Atribut
+
+Nilai
+
+Deskripsi
+
+download
+
+filename
+
+Menginstruksikan browser untuk mengunduh pada URL yang ditetapkan daripada mengarahkannya.
+
+href
+
+URL
+
+Menetapkan target yang akan diarahkan/unduh ketika pengguna menekan hyperlink.
+
+hreflang
+
+language_code
+
+Menetapkan bahasa dari dokumen target.
+
+ping
+
+list_of_URLs
+
+Menetapkan URL yang akan diberitahu dengan mengirimkan post request ping pada body oleh browser (berjalan di belakang layar) ketika target URL pada hyperlink ditekan. Biasanya atribut ini digunakan untuk pelacakan.
+
+referrerpolicy
+
+no-referrer,
+
+no-referrer-when-downgrade,
+
+origin,
+
+origin-when-cross-origin,
+
+unsafe-url
+
+Menetapkan referensi untuk dikirim pada target.
+
+rel
+
+alternate,
+
+author,
+
+bookmark,
+
+external,
+
+help,
+
+license,
+
+next,
+
+nofollow,
+
+noreferrer,
+
+noopener,
+
+prev,
+
+search,
+
+tag
+
+
+Menetapkan hubungan antara halaman yang ditampilkan dengan target.
+
+target
+
+_blank,
+
+_parent,
+
+_self,
+
+_top
+
+Menetapkan lokasi ketika membuka target contohnya pada sebuah tab, window, atau tab itu sendiri.
+
+media
+
+media_type
+
+Menetapkan tipe media yang digunakan pada target.
+
+
+Emphasized Text
+Gunakan elemen <em> untuk menunjukkan bagian kata yang perlu kita tekankan. Elemen ini menunjukkan stress emphasis atau konten/kata yang perlu mendapatkan penekanan atau perhatian khusus. Berikut contoh penggunaannya.
+
+
+Important Text
+Gunakan elemen <strong> untuk menunjukkan sebuah teks yang begitu penting (strong importance), serius ataupun mendesak. Artinya, teks tersebut harus dapat perhatian lebih dari teks biasa lainnya.
+
+
+
+
+Short Quotations
+Gunakan elemen <q> untuk menandai sebuah kutipan dalam sebuah teks. Elemen ini berbeda dengan <blockquote>. Elemen ini digunakan untuk kutipan pendek yang terletak di dalam baris (inline).
+
+
+
+
+Citation
+Selain sebuah atribut, <cite> juga merupakan sebuah elemen yang digunakan untuk sebuah rujukan pada sebuah dokumen, contohnya sebuah buku, majalah, artikel, dan lainnya.
+
+
+
+Defining Terms
+Elemen <dfn> digunakan ketika mendefinisikan sebuah istilah (term). Elemen ini harus terletak pada elemen lain yang menaunginya. Contohnya pada sebuah elemen <p> atau elemen <section>.
+
+
+
+Subscript dan Superscript
+Subscript <sub> dan superscript <sup> adalah elemen yang dapat membuat teks yang ditampilkan tampak kecil, dengan posisi di bawah (sub) atau di atas (sup) dari teks biasanya. Elemen ini digunakan untuk menunjukkan sebuah rumus kimia ataupun matematika.
+
+
+
+
+Highlighted Text
+Untuk menandai atau menyorot sebuah teks kita bisa menggunakan elemen <mark>. Elemen ini digunakan ketika terdapat sebuah teks yang memiliki peran penting, biasanya teks tersebut merupakan bagian yang paling relevan atau penting dalam sebuah konteks kalimat.
+
+
+
+
+Header, Footer, Main, dan Nav
+ elemen <header> dan <footer> dapat digunakan pada sebuah elemen <article> atau <section>. Header biasanya menampung judul dan penulis, footer dapat menampung sebuah link untuk membagikan artikel pada sebuah sosial media.
+
+Perlu kita ketahui bahwa elemen <header> dan <footer> tidak boleh ditulis di dalam elemen <header> dan <footer> lainnya (bertumpuk/nested).
+
+
+
+Articles, Aside, dan Section
+Elemen <article> bertindak sebagai container untuk independent content pada sebuah halaman, artinya konten utuh yang tidak terkait dengan konten lain, bisa saja sebuah artikel blog, komentar, forum post dan konten lainnya.
+
+Elemen <article> dapat berada pada elemen <article> lainnya (nested) selama artikel tersebut berkaitan dengan induk elemen <article> yang menampungnya.
+
+
+
+Aside
+Elemen <aside> memiliki dua tujuan, tergantung kita menempatkannya di dalam sebuah elemen <article> atau tidak.
+
+Ketika elemen ini ditempatkan di dalam elemen <article>, elemen ini dapat berisi informasi yang berhubungan dengan artikel tersebut, tetapi bukan bagian dari konten artikelnya itu sendiri (dipisahkan dari konten utama). 
+
+Ketika ditempatkan di luar elemen <article>, elemen ini dapat berisi informasi yang berhubungan pada keseluruhan halaman.
+
+Elemen <aside> biasanya terletak di samping dari sebuah elemen yang menampungnya. 
+
+
+
+Section
+Sebuah elemen yang memiliki kesamaan konten dan sebuah heading di dalamnya dapat dikelompokkan dengan menggunakan elemen <section>. Dengan begitu elemen ini dapat digunakan pada sebuah elemen <article> yang memiliki konten panjang dan berpotensi untuk dikelompokkan.
+
+Dalam sebuah <section> sebaiknya terdapat elemen heading (h1-h6), yang menjadi elemen pertama yang dituliskan pada sebuah section untuk menunjukkan judul atau tema dari bagian konten yang dikelompokkan.
+
+
+
+
+Struktur Dasar Tabel
+Tabel pada HTML disusun dari tiga buah elemen, yaitu <table>, <tr> dan <td> atau <th>. Elemen <table> digunakan untuk menandakan dimulainya dan diakhirinya sebuah konten tabel dan juga sebagai wadah untuk tabel itu sendiri. Kemudian elemen <tr> digunakan untuk membuat sebuah baris baru yang di dalamnya terdapat elemen <td> atau <th> sehingga menghasilkan sebuah sel. 
+
+Elemen <td> berarti “table data”. Selain membuat sel, elemen ini juga merupakan tempat menampung data pada tabel, dan elemen <th> atau “table header” digunakan untuk menentukan sebuah header pada kolom datanya. Untuk lebih jelasnya, perhatikan ilustrasi berikut.
+
+
+
+
+Spanning Cell
+Terkadang kita membutuhkan sebuah sel untuk mencakup dua kolom ataupun dua baris sekaligus. Dalam aplikasi seperti Microsoft Word, hal ini biasa kita kenal sebagai merging cell atau menggabungkan sebuah sel. Ini memang menjadi sebuah fitur dasar dalam membuat sebuah tabel sehingga pada HTML pun kita dapat melakukan hal tersebut. 
+
+Pada HTML hal ini lebih dikenal sebagai spanning cell, yang artinya menjangkau atau merentangkan sebuah ukuran sel lebih dari ukuran yang biasanya. Dengan spanning cell, kita dapat membuat sebuah tabel yang lebih kompleks, tetapi akan membuat markup yang kita tulis menjadi sedikit sulit dibaca.
+
+
+
+Column Spans
+Untuk merentangkan sebuah kolom (column spanning) kita bisa menggunakan atribut colspan pada elemen <td> atau <th>. Berikut adalah contoh untuk penggunaan colspan sehingga sebuah header mencakup dua kolom.
+
+
+
+Elemen dan Atribut pada Tabel
+Sejauh ini, Anda sudah mengetahui penerapan dasar untuk sebuah tabel pada HTML. Sebenarnya masih terdapat beberapa anggota elemen dan atributnya yang dapat digunakan pada tabel. Karena elemen ini jarang digunakan sehingga kita akan mengenal secara ringkas dan merangkumnya dalam sebuah tabel berikut:
+
+Elemen dan Atribut
+
+Deskripsi
+
+table
+
+Menetapkan elemen tabel.
+
+td
+
+Menetapkan sebuah sel dalam baris tabel.
+
+
+colspan=”number”
+
+Jumlah kolom yang dicakup oleh sel.
+
+
+rowspan=”number”
+
+Jumlah baris yang dicakup oleh sel.
+
+
+headers=”nama header”
+
+Mengasosiasikan data sel dengan header.
+
+th
+
+Menetapkan header yang terkait dengan baris atau kolom.
+
+
+colspan=”number”
+
+Jumlah kolom dicakup oleh header.
+
+
+rowspan=”number”
+
+Jumlah row yang dicakup oleh header.
+
+
+headers=”nama header”
+
+Mengasosiasikan header dengan header lain.
+
+
+scope=”row|col|rowgroup|colgroup”
+
+Mengasosiasikan header dengan baris, kelompok baris, kolom, atau kelompok kolom.
+
+tr
+
+Menetapkan sebuah baris pada tabel.
+
+caption
+
+Memberikan judul pada sebuah tabel.
+
+col
+
+Menetapkan sebuah kolom.
+
+colgroup
+
+Menetapkan sebuah kelompok kolom.
+
+tbody
+
+Mengidentifikasi sebuah body dalam tabel.
+
+tfoot
+
+Mengidentifikasi sebuah footer dalam tabel.
+
+thead
+
+Mengidentifikasi sebuah header dalam tabel.
+
+
+
+Input Element
+Elemen <input> merupakan elemen yang sangat sering dipakai untuk mendapatkan data dari user. Mengapa hal tersebut terjadi? Hal ini karena elemen input memiliki banyak sekali tipe-tipenya, mulai dari teks, password, email, search, file, dsb. Tidak hanya itu, dari sekian tipe input, masing-masingnya juga didukung oleh atribut khusus sehingga pembuatan formulir semakin powerful.
+
+
+Tipe
+
+Deskripsi
+
+<input type="text">
+
+Input teks yang berisi satu baris. Ini adalah tipe default dari input elemen. Jika tidak menentukan tipenya, tipe text-lah yang akan diterapkan.
+
+<input type="number">
+
+Input teks yang hanya mengizinkan format angka. 
+
+<input type="password">
+
+Sama seperti input text, tetapi setiap karakter akan ditampilkan sebagai bintang.
+
+<input type="email">
+
+Sama seperti teks biasa, tetapi input ini dikhususkan untuk format email. Jika tidak, error akan muncul.
+
+<input type="search">
+
+Input untuk melakukan pencarian berdasarkan kata kunci. Input ini memiliki ikon ✕ di tepi kanan elemen untuk melakukan clear text.
+
+<input type="date">
+
+Untuk mengambil data tanggal. Tipe ini akan menyediakan popup penanggalan untuk mempermudah pengisian. 
+
+<input type="time">
+
+Menentukan waktu (jam) yang ingin user isi. Tipe input ini juga akan menampilkan visual dari jam.
+
+<input type="datetime-local">
+
+Sama seperti tipe date, tetapi ia menambahkan data waktu (jam).
+
+<input type="checkbox">
+
+Di-render sebagai sebuah kotak yang dapat dicek untuk active.
+
+<input type="radio">
+
+Pada umumnya, ini digunakan untuk melakukan pemilihan dari sekian opsi (radio button) yang ada. Untuk melakukannya, input ini akan dikelompokkan dalam sebuah radio group. Bukan merupakan suatu elemen, kita dapat memberikan value yang sama pada atribut name di setiap elemen radio.
+
+<input type="range">
+
+Menentukan nilai angka berdasarkan jangkauan nilai yang ditentukan. User tidak akan bisa mengambil nilai diluar yang ditentukan. 
+
+<input type="color">
+
+User dapat menentukan warna dengan tipe ini, baik menggunakan color picker atau memasukkan format nilai warna secara manual.
+
+<input type="file">
+
+Melakukan input satu atau lebih berkas dari penyimpanan data perangkatnya.
+
+<input type="submit">
+
+Input yang di-render sebagai tombol submit. Jika tombol ini ditekan, formulir akan ter-submit dan dikirimkan ke tujuan pengiriman (atribut action).
+
+<input type="hidden">
+
+Biasanya, tipe ini tidak terlihat oleh user. Namun, input ini akan sangat berguna bagi developer untuk memasukkan suatu data.
+
+
+
+
+Label Element
+Pembuatan elemen input sudah umum jika dijajarkan dengan elemen label. Ada banyak sekali keuntungan jika memberikan keterangan–dengan kata lain, kita bisa menyebutnya caption–pada masing-masing elemen input. Tidak hanya elemen input, elemen lainnya seperti textarea juga perlu disandingkan dengan elemen label.
+
+Beberapa keuntungan penerapan label untuk elemen input sebagai berikut.
+
+Elemen input yang berasosiasi dengan elemen label akan memberikan kemampuan bagi screen reader untuk menjelaskan fungsi dari elemen input tersebut. Dalam hal ini, ia akan meningkatkan aksesibilitas. Tentunya, ini akan sangat bermanfaat bagi penyandang disabilitas.
+Memberikan kemampuan bagi browser untuk mengalihkan langsung pada elemen input saat elemen label yang berasosiasi dengannya ditekan atau klik.
+Ada dua langkah untuk menghubungkan elemen label dan input. Pertama, menambahkan atribut id pada elemen input beserta value-nya. Kedua, menambahkan atribut for pada elemen label dan value-nya. Apakah sudah selesai sampai sini? Jawabannya, belum. Kita perlu memberikan value yang sama pada kedua atribut (id dan for). Dengan cara ini, elemen label akan berasosiasi dengan elemen input dan kita akan mendapatkan dua keuntungan yang telah dibahas sebelumnya.
+
+
+
+
+
+Special Character
+Ada beberapa karakter spesial seperti copyright symbol (©) yang tidak termasuk ke dalam standar kelompok ASCII characters. ASCII characters hanya menyediakan karakter seperti huruf, nomor, dan beberapa simbol dasar lainnya. Karakter lain, seperti lebih besar dari (>) atau lebih kecil dari (<), tidak dapat digunakan secara langsung sebagai konten pada HTML meskipun tersedia dalam ASCII character. Hal ini karena karakter tersebut akan terbaca sebagai sebuah tag.
+
+Untuk menampilkan karakter seperti yang disebutkan tadi, HTML memerlukan sebuah “escaped” character. Escaping artinya tidak menulis karakter itu sendiri, tetapi ia diganti dengan nilai numeric atau character reference pada karakternya.
+
+Ada dua cara untuk melakukannya, yakni menetapkan nilai numerik (numeric entity) atau menggunakan nama singkatan yang sudah ditetapkan untuk masing-masing karakternya (named entity). Semua referensi karakter dimulai dengan “&” dan diakhiri dengan “;”.
+
+Contohnya, untuk menggunakan simbol copyright, kita dapat menggunakan “&copy;”.
+
+
