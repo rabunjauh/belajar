@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="mainDiv" class="flex justify-center h-screen">
+      <div
+        id="subDiv"
+        class="mt-10 w-[700px] bg-white flex flex-col items-center"
+      >
+        <div>
+          <h1 class="text-5xl text-slate-900 py-10">Todo List</h1>
+        </div>
+        <div>
+          <form name="todoForm">
+            <input
+              type="text"
+              id="todo"
+              name="todo"
+              placeholder="Input task"
+              class="border border-solid w-[550px] h-16 px-3"
+            />
+            <input
+              type="submit"
+              class="bg-slate-100 border border-slate-900 text-slate-900 w-24 h-16 font-bold hover:bg-slate-900 hover:text-white"
+              id="add"
+              value="+"
+            />
+          </form>
+        </div>
+        <div id="todoListDivParent" class="px-9 w-[700px] mt-10"></div>
+      </div>
+    </div>
+    <script>
+      const todoList = [];
+
+      function clearTodo(todoListDivParent) {
+        while (todoListDivParent.firstChild) {
+          todoListDivParent.removeChild(todoListDivParent.firstChild);
+        }
+      }
+
+      function createElementTodo(i) {
+        const p = document.createElement("p");
+        p.textContent = todoList[i];
+
+        const doneBtn = document.createElement("input");
+        doneBtn.type = "button";
+        doneBtn.value = "✓";
+        doneBtn.classList.add(
+          "bg-slate-900",
+          "border",
+          "border-slate-100",
+          "text-slate-100",
+          "w-11",
+          "h-11",
+          "font-bold",
+          "hover:bg-slate-100",
+          "hover:text-slate-900",
+          "rounded-3xl"
+        );
+
+        doneBtn.onclick = function () {
+          todoList.splice(i, 1);
+
+          displayTodolist();
+        };
+
+        const todoListDiv = document.createElement("div");
+        todoListDiv.classList.add(
+          "border",
+          "w-[550px]",
+          "py-2",
+          "px-5",
+          "flex",
+          "gap-3",
+          "items-center",
+          "justify-between",
+          "bg-slate-900",
+          "text-white",
+          "rounded-3xl"
+        );
+
+        todoListDiv.appendChild(p);
+        const todoListDivSubParent = document.createElement("div");
+        todoListDivSubParent.classList.add(
+          "flex",
+          "items-center",
+          "justify-around"
+        );
+        todoListDivSubParent.appendChild(doneBtn);
+        const todoListDivParent = document.querySelector("#todoListDivParent");
+
+        todoListDivSubParent.appendChild(todoListDiv);
+        todoListDivParent.appendChild(todoListDivSubParent);
+      }
+
+      function displayTodolist() {
+        clearTodo(todoListDivParent);
+        for (i = 0; i < todoList.length; i++) {
+          createElementTodo(i);
+        }
+      }
+
+      document.forms["todoForm"].onsubmit = (event) => {
+        event.preventDefault();
+        const todo = document.forms["todoForm"]["todo"].value;
+        if (todo !== "") {
+          todoList.push(todo);
+        }
+        const mainDiv = document.querySelector("#mainDiv");
+        const subDiv = document.querySelector("#subDiv");
+        const todoListDivParent = document.querySelector("#todoListDivParent");
+
+        subDiv.appendChild(todoListDivParent);
+        mainDiv.appendChild(subDiv);
+        document.body.appendChild(mainDiv);
+
+        displayTodolist();
+
+        document.forms["todoForm"].reset();
+      };
+    </script>
+  </body>
+</html>

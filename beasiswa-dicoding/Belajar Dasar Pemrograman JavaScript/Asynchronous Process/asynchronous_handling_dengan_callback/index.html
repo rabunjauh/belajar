@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getUsers(callback) {
+        setTimeout(() => {
+          const users = ["john", "jack", "abigail"];
+          callback(users);
+        }, 3000);
+      }
+
+      getUsers((users) => {
+        console.log(users);
+      });
+    </script>
+  </body>
+</html>

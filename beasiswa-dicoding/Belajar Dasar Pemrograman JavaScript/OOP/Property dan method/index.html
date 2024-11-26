@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // class Car {
+      //   constructor(brand, color, maxSpeed, chassisNumber) {
+      //     this.brand = brand;
+      //     this.color = color;
+      //     this.maxSpeed = maxSpeed;
+      //     this.chassisNumber = chassisNumber;
+      //   }
+      // }
+      // const car1 = new Car("BMW", "red", 200, "b-1");
+      // console.log(car1);
+
+      class User {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        }
+
+        set fullName(fullName) {
+          const [firstName, lastName] = fullName.split(" ");
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+      }
+
+      const user = new User("John", "Doe");
+      // user.fullName = "fulan fulanah";
+      console.log(user.fullName);
+    </script>
+  </body>
+</html>

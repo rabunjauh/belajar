@@ -1,0 +1,33 @@
+step by step
+- Buat folder
+- Klik kanan di folder Open Gitbash here
+- npm init
+- edit package.json -> tambah kan "type": "module" setelah license
+- Menambah Library Jest untuk unit test
+  -npm install --save-dev jest @types/Jest
+- Menambahkan library Babel agar (agar jest support javascript module)
+  -npm install --save-dev babel-jest @babel/preset-env
+  -Documentation https://babeljs.io/setup#installation ->Test Framework Jest
+- Menambah TypeScript
+  -npm install --save-dev TypeScript
+  -Documentation https://www.npmjs.com/package/typescript
+
+- Setup Typescript Project
+  -npx tsc --init
+  -Semua konfigurasi akan dibuat di file tsconfig.json
+  -ubah "module" dari "commonjs" menjadi "ES6"
+- Setup TypeScript untuk Jest
+  -https://jestjs.io/docs/getting-started#using-typescript
+
+-Compile TypeScript npx tsc
+  -secara default, semua hasil compile akan disimpan dilokasi yang sama dengan file TypeScript
+  -Kadang, praktek programmer TypeScript biasanya memisahkan lokasi hasil compile ke sebuah folder misal dist(distribution)
+  -Untuk mengubah lokasi file hasil compile, kita perlu ubah di tsconfig.json
+  -"outDir": "dist/"
+  -Include dan Exclude
+   -Secara default, semua file ts akan coba dicompile oleh TypeScript, kadang-kadang kita tidak membutuhkan hal tsb
+   -Misal kita hanya ingin melakukan compile untuk kode program, dan tidak butuh melakukan compile untuk kode unit test
+   -Kita bisa tambahkan exclude pada tsconfig.json nya
+   -Documentation
+    -https://www.typescriptlang.org/tsconfig/#include
+    -https://www.typescriptlang.org/tsconfig/#exclude

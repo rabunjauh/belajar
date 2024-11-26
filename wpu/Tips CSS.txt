@@ -1,0 +1,40 @@
+Untuk buat background ditengah dan penuh
+background-size: cover;
+background-position: center;
+
+Untuk buat text center horizontal dan vertical
+set display parent menjadi 
+display: flex;
+set children: margin: auto;
+
+framer motion
+g shape
+
+cara buat navbar transparent saat di scroll ke atas menggunakan javascript
+
+// const navbar = document.querySelector(".navbar");
+
+// let prevScrollpos = window.scrollY || document.documentElement.scrollTop; // Menggunakan OR untuk kompatibilitas
+
+// window.onscroll = function () {
+//   const currentScrollPos = window.scrollY || document.documentElement.scrollTop;
+
+//   if (prevScrollpos > currentScrollPos) {
+//     navbar.classList.add("navbar__show");
+//   } else {
+//     navbar.classList.remove("navbar__show");
+//     navbar.classList.add("navbar__hidden");
+//   }
+
+//   prevScrollpos = currentScrollPos;
+
+//   if (currentScrollPos <= 0) {
+//     navbar.classList.remove("navbar__show");
+//   }
+// };
+
+// window.addEventListener("scroll", function () {
+//   console.log("tes");
+//   const navbar = document.querySelector(".navbar");
+//   navbar.classList.toggle("navbar__show", window.scrollY > 0);
+// });
